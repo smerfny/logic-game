@@ -16,12 +16,12 @@ namespace Assets.Scripts.Classes.Base
             return menuObject.transform.Find(name).gameObject.GetComponent<T>();
         }
 
-        public void Show()
+        public virtual void Show()
         {
             menuObject.SetActive(true);
         }
 
-        public void Hide()
+        public virtual void Hide()
         {
             menuObject.SetActive(false);
         }

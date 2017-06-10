@@ -32,7 +32,14 @@ namespace Assets.Scripts.Classes
 
         private void LoadSettings()
         {
-            playerName = "Player";
+            if (!PlayerPrefs.HasKey("playerName"))
+            {
+                playerName = "Player";
+                PlayerPrefs.SetString("playerName", playerName);
+            } else
+            {
+                playerName = PlayerPrefs.GetString("playerName");
+            }
             playerInput.text = playerName;
         }
 
@@ -45,12 +52,18 @@ namespace Assets.Scripts.Classes
         private void OnPlayerEndEdit()
         {
             playerName = playerInput.text;
+            PlayerPrefs.SetString("playerName", playerName);
         }
 
         private void OnPlayClick()
         {
             if (PlayClicked == null) return;
             PlayClicked();
+        }
+
+        public string GetPlayerName()
+        {
+            return playerName;
         }
     }
 }

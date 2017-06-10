@@ -37,7 +37,8 @@ namespace Assets.Scripts.Classes
         {
             for (var i = 0; i < buttonCount; i++)
             {
-                levelButtons[i].onClick.AddListener(() => OnLevelClick(i));
+                int lvl = i;
+                levelButtons[i].onClick.AddListener(() => OnLevelClick(lvl));
             }
             backButton.onClick.AddListener(OnBackClick);
         }

@@ -78,6 +78,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\Classes\Base\BaseUI.cs" />
+    <Compile Include="Assets\Scripts\Classes\Complete.cs" />
+    <Compile Include="Assets\Scripts\Classes\Gameplay.cs" />
+    <Compile Include="Assets\Scripts\Classes\GameplayBoardManager.cs" />
     <Compile Include="Assets\Scripts\Classes\LevelMenu.cs" />
     <Compile Include="Assets\Scripts\Classes\Menu.cs" />
     <Compile Include="Assets\Scripts\GameController.cs" />
